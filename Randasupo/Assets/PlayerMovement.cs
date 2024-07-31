@@ -1,31 +1,45 @@
+using System.Collections;
 using UnityEngine;
-using System.Collections; // Add this line
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Transform[] boardSpaces; // Array of board spaces
-    private int currentSpace = 0;
-    public float moveSpeed = 2f; // Adjust the speed as needed
+    public Transform[] boardSpaces; // すごろくのマスを格納する配列
+    public float moveSpeed = 2.0f; // プレイヤーの移動速度
 
-    public void MovePlayer(int spaces)
+    private int currentPosition = 0;
+
+    public void MovePlayer(int steps)
     {
-        StartCoroutine(Move(spaces));
+        Debug.Log("MovePlayer called with steps: " + steps); // デバッグログ追加
+        StartCoroutine(Move(steps));
     }
 
-    private IEnumerator Move(int spaces)
+    IEnumerator Move(int steps)
     {
-        int targetSpace = currentSpace + spaces;
-        targetSpace = Mathf.Min(targetSpace, boardSpaces.Length - 1); // Ensure player doesn't go out of bounds
+        int targetPosition = currentPosition + steps;
+        targetPosition = Mathf.Clamp(targetPosition, 0, boardSpaces.Length - 1); // 範囲を制限
+        Debug.Log("Moving from " + currentPosition + " to " + targetPosition); // デバッグログ追加
 
-        while (currentSpace < targetSpace)
+        while (currentPosition != targetPosition)
         {
-            currentSpace++;
-            Vector3 targetPosition = boardSpaces[currentSpace].position;
-            while (transform.position != targetPosition)
+            Vector3 startPosition = transform.position;
+            Vector3 endPosition = boardSpaces[currentPosition + 1].position;
+            float journey = 0f;
+
+            while (journey < 1f)
             {
-                transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+                journey += Time.deltaTime * moveSpeed;
+                transform.position = Vector3.Lerp(startPosition, endPosition, journey);
+
+                // 位置制限を適用
+                transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+
                 yield return null;
             }
+
+            transform.position = endPosition;
+            currentPosition++;
+            yield return new WaitForSeconds(0.1f); // マス間の待機時間
         }
     }
 }
