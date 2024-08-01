@@ -52,11 +52,11 @@ public class DiceScript : MonoBehaviour
 
         if (result == 1 || result == 3 || result == 5)
         {
-            SceneManager.LoadScene("Scene2"); // Scene2に移動
+            SceneManager.LoadScene("3danntobi"); // Scene2に移動
         }
         else if (result == 2 || result == 4 || result == 6)
         {
-            SceneManager.LoadScene("Scene3"); // Scene3に移動
+            SceneManager.LoadScene("3danntobi"); // Scene3に移動
         }
     }
 }

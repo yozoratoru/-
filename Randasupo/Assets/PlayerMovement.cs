@@ -42,4 +42,12 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForSeconds(0.1f); // マス間の待機時間
         }
     }
+
+    // リセットメソッドを追加
+    public void ResetPlayer()
+    {
+        currentPosition = 0;
+        transform.position = boardSpaces[0].position; // プレイヤーを最初のマスに戻す
+        Debug.Log("Player position has been reset."); // デバッグログ追加
+    }
 }
