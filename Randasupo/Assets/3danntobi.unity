@@ -1679,8 +1679,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 749298474}
-  - component: {fileID: 749298473}
-  - component: {fileID: 749298475}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -1688,19 +1686,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &749298473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749298472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f7595844ba13ea47a5e49e3d1a9bbec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gaugeSlider: {fileID: 800677855}
 --- !u!4 &749298474
 Transform:
   m_ObjectHideFlags: 0
@@ -1716,22 +1701,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &749298475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749298472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 707b559c96098964e8580b0d68e94722, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gaugeSlider: {fileID: 800677855}
-  scoreText: {fileID: 1562927997}
-  playerController: {fileID: 1966179452}
-  totalScore: 0
 --- !u!1 &752383674
 GameObject:
   m_ObjectHideFlags: 0
@@ -4911,7 +4880,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1966179451}
   - component: {fileID: 1966179450}
-  - component: {fileID: 1966179452}
   m_Layer: 0
   m_Name: Ordinary_0
   m_TagString: Untagged
@@ -4986,35 +4954,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1966179452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966179448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41b00aac730ff1741997567ce640742b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  squares:
-  - {fileID: 108142611}
-  - {fileID: 1845115029}
-  - {fileID: 1534606205}
-  - {fileID: 1689617420}
-  - {fileID: 2080014149}
-  - {fileID: 1846127864}
-  - {fileID: 2099251880}
-  - {fileID: 1560715942}
-  - {fileID: 1224306997}
-  - {fileID: 1056299000}
-  - {fileID: 460599486}
-  - {fileID: 1886002569}
-  - {fileID: 1352981442}
-  - {fileID: 1010716155}
-  - {fileID: 572987151}
-  moveSpeed: 5
 --- !u!1 &1982479278
 GameObject:
   m_ObjectHideFlags: 0
@@ -5459,7 +5398,6 @@ GameObject:
   - component: {fileID: 2103311990}
   - component: {fileID: 2103311992}
   - component: {fileID: 2103311991}
-  - component: {fileID: 2103311993}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -5524,20 +5462,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103311989}
   m_CullTransparentMesh: 1
---- !u!114 &2103311993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103311989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10229518dd2219e42a3aa64a8e7216a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  progressBar: {fileID: 2103311991}
-  fillAmount: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

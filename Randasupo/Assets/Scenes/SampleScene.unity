@@ -1934,7 +1934,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.44, z: -10}
+  m_LocalPosition: {x: 0, y: -0.44000006, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3103,7 +3103,6 @@ GameObject:
   - component: {fileID: 783883678}
   - component: {fileID: 783883680}
   - component: {fileID: 783883679}
-  - component: {fileID: 783883681}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -3168,27 +3167,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783883677}
   m_CullTransparentMesh: 1
---- !u!114 &783883681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783883677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4934ab666b8ab574cb86360536373495, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  diceImages:
-  - {fileID: 706480811, guid: 1c77431964a12d242854ab44bcc02f82, type: 3}
-  - {fileID: -1298692379, guid: 1c77431964a12d242854ab44bcc02f82, type: 3}
-  - {fileID: 1547821877, guid: 1c77431964a12d242854ab44bcc02f82, type: 3}
-  - {fileID: 2000228413, guid: 1c77431964a12d242854ab44bcc02f82, type: 3}
-  - {fileID: -125246124, guid: 1c77431964a12d242854ab44bcc02f82, type: 3}
-  - {fileID: 1414815993, guid: 1c77431964a12d242854ab44bcc02f82, type: 3}
-  diceImage: {fileID: 783883679}
-  playerMovement: {fileID: 1488041847}
 --- !u!1 &804126639
 GameObject:
   m_ObjectHideFlags: 0
@@ -3793,6 +3771,7 @@ GameObject:
   m_Component:
   - component: {fileID: 977891543}
   - component: {fileID: 977891544}
+  - component: {fileID: 977891545}
   m_Layer: 0
   m_Name: saikoro
   m_TagString: Untagged
@@ -3867,6 +3846,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &977891545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977891541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db23d732312a3041a94cc07bc679ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diceSprites:
+  - {fileID: 706480811, guid: 1c77431964a12d242854ab44bcc02f82, type: 3}
+  - {fileID: -1298692379, guid: 1c77431964a12d242854ab44bcc02f82, type: 3}
+  - {fileID: 1547821877, guid: 1c77431964a12d242854ab44bcc02f82, type: 3}
+  - {fileID: 2000228413, guid: 1c77431964a12d242854ab44bcc02f82, type: 3}
+  - {fileID: -125246124, guid: 1c77431964a12d242854ab44bcc02f82, type: 3}
+  - {fileID: 1414815993, guid: 1c77431964a12d242854ab44bcc02f82, type: 3}
+  diceImage: {fileID: 783883679}
 --- !u!1 &981665646
 GameObject:
   m_ObjectHideFlags: 0
@@ -5025,6 +5024,112 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1343942079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1343942081}
+  - component: {fileID: 1343942080}
+  m_Layer: 0
+  m_Name: gamemane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1343942080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343942079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e03bb536b1de1a499ba3dc5d2ffa851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameBoardSpaces:
+  - spaceTransform: {fileID: 1072766713}
+  - spaceTransform: {fileID: 1026576234}
+  - spaceTransform: {fileID: 1984094328}
+  - spaceTransform: {fileID: 416071981}
+  - spaceTransform: {fileID: 1988925322}
+  - spaceTransform: {fileID: 1477086062}
+  - spaceTransform: {fileID: 1799521722}
+  - spaceTransform: {fileID: 575319662}
+  - spaceTransform: {fileID: 582330107}
+  - spaceTransform: {fileID: 688844308}
+  - spaceTransform: {fileID: 1282707006}
+  - spaceTransform: {fileID: 2030870790}
+  - spaceTransform: {fileID: 1678711303}
+  - spaceTransform: {fileID: 263612125}
+  - spaceTransform: {fileID: 738757047}
+  - spaceTransform: {fileID: 1926637865}
+  - spaceTransform: {fileID: 1461600054}
+  - spaceTransform: {fileID: 1734733762}
+  - spaceTransform: {fileID: 399906191}
+  - spaceTransform: {fileID: 1337796521}
+  - spaceTransform: {fileID: 1966634041}
+  - spaceTransform: {fileID: 557249660}
+  - spaceTransform: {fileID: 2000191172}
+  - spaceTransform: {fileID: 1994119625}
+  - spaceTransform: {fileID: 2101439718}
+  - spaceTransform: {fileID: 394378612}
+  - spaceTransform: {fileID: 418453934}
+  - spaceTransform: {fileID: 134787680}
+  - spaceTransform: {fileID: 1547510463}
+  - spaceTransform: {fileID: 983346874}
+  - spaceTransform: {fileID: 813497468}
+  - spaceTransform: {fileID: 1670404991}
+  - spaceTransform: {fileID: 514818298}
+  - spaceTransform: {fileID: 81022011}
+  - spaceTransform: {fileID: 1783594989}
+  - spaceTransform: {fileID: 1681293746}
+  - spaceTransform: {fileID: 66058572}
+  - spaceTransform: {fileID: 585596232}
+  - spaceTransform: {fileID: 806834095}
+  - spaceTransform: {fileID: 634607656}
+  - spaceTransform: {fileID: 870628022}
+  - spaceTransform: {fileID: 247615351}
+  - spaceTransform: {fileID: 95359901}
+  - spaceTransform: {fileID: 1896680561}
+  - spaceTransform: {fileID: 335333288}
+  - spaceTransform: {fileID: 1196149678}
+  - spaceTransform: {fileID: 1194486288}
+  - spaceTransform: {fileID: 707934867}
+  - spaceTransform: {fileID: 590129487}
+  - spaceTransform: {fileID: 1736488714}
+  - spaceTransform: {fileID: 57149173}
+  - spaceTransform: {fileID: 994487366}
+  - spaceTransform: {fileID: 1028097055}
+  - spaceTransform: {fileID: 898050362}
+  - spaceTransform: {fileID: 1535121208}
+  - spaceTransform: {fileID: 1599232704}
+  - spaceTransform: {fileID: 1068241332}
+  - spaceTransform: {fileID: 783171654}
+  - spaceTransform: {fileID: 1787953761}
+  - spaceTransform: {fileID: 740233838}
+  player: {fileID: 1488041846}
+--- !u!4 &1343942081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343942079}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 329.72037, y: 226.86475, z: -1.9637153}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1371889113
 GameObject:
   m_ObjectHideFlags: 0
@@ -5444,71 +5549,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1488041844}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adffb40b3dc91554eb3b417c4f6fe2aa, type: 3}
+  m_Script: {fileID: 11500000, guid: a84f1c14e66c3e84794c4dcf387f2ed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boardSpaces:
-  - {fileID: 1072766713}
-  - {fileID: 1026576234}
-  - {fileID: 1984094328}
-  - {fileID: 416071981}
-  - {fileID: 1988925322}
-  - {fileID: 1477086062}
-  - {fileID: 1799521722}
-  - {fileID: 575319662}
-  - {fileID: 582330107}
-  - {fileID: 688844308}
-  - {fileID: 1282707006}
-  - {fileID: 2030870790}
-  - {fileID: 1678711303}
-  - {fileID: 263612125}
-  - {fileID: 738757047}
-  - {fileID: 1926637865}
-  - {fileID: 1461600054}
-  - {fileID: 1734733762}
-  - {fileID: 399906191}
-  - {fileID: 1337796521}
-  - {fileID: 1966634041}
-  - {fileID: 557249660}
-  - {fileID: 2000191172}
-  - {fileID: 1994119625}
-  - {fileID: 2101439718}
-  - {fileID: 394378612}
-  - {fileID: 418453934}
-  - {fileID: 134787680}
-  - {fileID: 1547510463}
-  - {fileID: 983346874}
-  - {fileID: 813497468}
-  - {fileID: 1670404991}
-  - {fileID: 514818298}
-  - {fileID: 81022011}
-  - {fileID: 1783594989}
-  - {fileID: 1681293746}
-  - {fileID: 66058572}
-  - {fileID: 585596232}
-  - {fileID: 806834095}
-  - {fileID: 634607656}
-  - {fileID: 870628022}
-  - {fileID: 247615351}
-  - {fileID: 95359901}
-  - {fileID: 1896680561}
-  - {fileID: 335333288}
-  - {fileID: 1196149678}
-  - {fileID: 1194486288}
-  - {fileID: 707934867}
-  - {fileID: 590129487}
-  - {fileID: 1736488714}
-  - {fileID: 57149173}
-  - {fileID: 994487366}
-  - {fileID: 1028097055}
-  - {fileID: 898050362}
-  - {fileID: 1535121208}
-  - {fileID: 1599232704}
-  - {fileID: 1068241332}
-  - {fileID: 783171654}
-  - {fileID: 1787953761}
-  - {fileID: 740233838}
-  moveSpeed: 1
 --- !u!1 &1491886180
 GameObject:
   m_ObjectHideFlags: 0
@@ -7522,27 +7565,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2023679512}
-  - component: {fileID: 2023679511}
+  - component: {fileID: 2023679513}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: detamane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2023679511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023679510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f7595844ba13ea47a5e49e3d1a9bbec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerMovement: {fileID: 1488041847}
 --- !u!4 &2023679512
 Transform:
   m_ObjectHideFlags: 0
@@ -7558,6 +7588,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2023679513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023679510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab1d947de4de414ebe1c43fb52346e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveData:
+    playerPosition: 0
 --- !u!1 &2030870789
 GameObject:
   m_ObjectHideFlags: 0
@@ -7832,3 +7876,4 @@ SceneRoots:
   - {fileID: 804126642}
   - {fileID: 1291426445}
   - {fileID: 2023679512}
+  - {fileID: 1343942081}
