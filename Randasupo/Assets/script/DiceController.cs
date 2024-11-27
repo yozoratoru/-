@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DiceController : MonoBehaviour
 {
@@ -44,15 +45,8 @@ public class DiceController : MonoBehaviour
         diceImage.sprite = diceSprites[currentResult - 1]; // 対応するスプライトを設定
         Debug.Log("サイコロの目: " + currentResult);
 
-        // プレイヤーを進める
-        if (BoardManager.Instance != null)
-        {
-            BoardManager.Instance.MovePlayer(currentResult);
-        }
-        else
-        {
-            Debug.LogError("BoardManager.Instance is null.");
-        }
+        // ミニゲームシーンへ移動
+        StartMinigame();
     }
 
     private IEnumerator RollDiceAnimation()
@@ -63,5 +57,14 @@ public class DiceController : MonoBehaviour
             diceImage.sprite = diceSprites[randomIndex];
             yield return new WaitForSeconds(0.1f);
         }
+    }
+
+    private void StartMinigame()
+    {
+        // サイコロの目をデータとして保存（後でミニゲームの動きに応用可能）
+        DataManager.Instance.saveData.diceRollResult = currentResult;
+
+        // ミニゲームシーンに移動
+        SceneManager.LoadScene("3danntobi");
     }
 }

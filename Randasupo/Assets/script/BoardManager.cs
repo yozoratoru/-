@@ -1,11 +1,10 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BoardManager : MonoBehaviour
 {
     public static BoardManager Instance;
-    public List<GameBoardSpace> gameBoardSpaces;
-    public Transform player;
+    public Transform[] gameBoardSpaces; // マスの配列
+    public GameObject player;           // プレイヤーオブジェクト
 
     private void Awake()
     {
@@ -21,39 +20,28 @@ public class BoardManager : MonoBehaviour
 
     private void Start()
     {
-        // 保存された位置にプレイヤーを復元
+        // プレイヤーの位置をロード
         int savedPosition = DataManager.Instance.saveData.playerPosition;
-        if (savedPosition >= 0 && savedPosition < gameBoardSpaces.Count)
+
+        if (savedPosition >= 0 && savedPosition < gameBoardSpaces.Length)
         {
-            player.position = gameBoardSpaces[savedPosition].spaceTransform.position;
-            Debug.Log("プレイヤーの位置を復元しました: " + savedPosition);
+            MovePlayerTo(savedPosition); // 保存された位置に移動
+        }
+        else
+        {
+            Debug.LogError("Invalid saved position: " + savedPosition);
         }
     }
 
-    public void MovePlayer(int diceRoll)
+    public void MovePlayerTo(int position)
     {
-        if (gameBoardSpaces == null || gameBoardSpaces.Count == 0)
+        if (position >= 0 && position < gameBoardSpaces.Length)
         {
-            Debug.LogError("GameBoardSpaces is not set. Please assign spaces in the Inspector.");
-            return;
+            player.transform.position = gameBoardSpaces[position].position;
         }
-
-        int playerPosition = DataManager.Instance.saveData.playerPosition;
-        playerPosition += diceRoll;
-
-        if (playerPosition >= gameBoardSpaces.Count)
+        else
         {
-            playerPosition = gameBoardSpaces.Count - 1; // 最後のマスでストップ
+            Debug.LogError("Invalid position: " + position);
         }
-
-        // プレイヤーを移動
-        Transform targetSpace = gameBoardSpaces[playerPosition].spaceTransform;
-        player.position = targetSpace.position;
-
-        // 現在位置を保存
-        DataManager.Instance.saveData.playerPosition = playerPosition;
-        DataManager.Instance.Save();
-
-        Debug.Log("Player moved to space " + playerPosition);
     }
 }

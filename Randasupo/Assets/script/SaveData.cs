@@ -1,5 +1,6 @@
 [System.Serializable]
 public class SaveData
 {
-    public int playerPosition = 0; // プレイヤーの現在位置
+    public int playerPosition = 0; // 現在のプレイヤー位置
+    public int diceRollResult = 0; // サイコロの目（ミニゲーム用）
 }

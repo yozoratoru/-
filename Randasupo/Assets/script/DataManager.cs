@@ -5,7 +5,7 @@ public class DataManager : MonoBehaviour
 {
     public static DataManager Instance;
     public SaveData saveData;
-    private string filePath;
+    private string saveFilePath;
 
     private void Awake()
     {
@@ -13,36 +13,35 @@ public class DataManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            saveFilePath = Application.persistentDataPath + "/SaveData.json";
+            LoadData();
         }
         else
         {
             Destroy(gameObject);
         }
-
-        filePath = Application.persistentDataPath + "/SaveData.json";
-
-        Load(); // 起動時にデータを読み込む
     }
 
-    public void Save()
+    // データをロード
+    private void LoadData()
     {
-        string json = JsonUtility.ToJson(saveData, true);
-        File.WriteAllText(filePath, json);
-        Debug.Log("データを保存しました: " + filePath);
-    }
-
-    public void Load()
-    {
-        if (File.Exists(filePath))
+        if (File.Exists(saveFilePath))
         {
-            string json = File.ReadAllText(filePath);
+            string json = File.ReadAllText(saveFilePath);
             saveData = JsonUtility.FromJson<SaveData>(json);
-            Debug.Log("データを読み込みました: " + filePath);
         }
         else
         {
-            saveData = new SaveData(); // データがない場合は初期化
-            Debug.Log("新しいデータを作成しました。");
+            saveData = new SaveData(); // 初期データを設定
+            SaveData();
         }
+    }
+
+    // データを保存
+    public void SaveData()
+    {
+        string json = JsonUtility.ToJson(saveData, true);
+        File.WriteAllText(saveFilePath, json);
     }
 }
