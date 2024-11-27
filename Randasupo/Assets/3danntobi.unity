@@ -4968,7 +4968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gaugeSlider: {fileID: 800677855}
-  scoreText: {fileID: 1144339073}
+  scoreText: {fileID: 1562927997}
 --- !u!1 &1982479278
 GameObject:
   m_ObjectHideFlags: 0

@@ -5054,67 +5054,67 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameBoardSpaces:
-  - spaceTransform: {fileID: 1072766713}
-  - spaceTransform: {fileID: 1026576234}
-  - spaceTransform: {fileID: 1984094328}
-  - spaceTransform: {fileID: 416071981}
-  - spaceTransform: {fileID: 1988925322}
-  - spaceTransform: {fileID: 1477086062}
-  - spaceTransform: {fileID: 1799521722}
-  - spaceTransform: {fileID: 575319662}
-  - spaceTransform: {fileID: 582330107}
-  - spaceTransform: {fileID: 688844308}
-  - spaceTransform: {fileID: 1282707006}
-  - spaceTransform: {fileID: 2030870790}
-  - spaceTransform: {fileID: 1678711303}
-  - spaceTransform: {fileID: 263612125}
-  - spaceTransform: {fileID: 738757047}
-  - spaceTransform: {fileID: 1926637865}
-  - spaceTransform: {fileID: 1461600054}
-  - spaceTransform: {fileID: 1734733762}
-  - spaceTransform: {fileID: 399906191}
-  - spaceTransform: {fileID: 1337796521}
-  - spaceTransform: {fileID: 1966634041}
-  - spaceTransform: {fileID: 557249660}
-  - spaceTransform: {fileID: 2000191172}
-  - spaceTransform: {fileID: 1994119625}
-  - spaceTransform: {fileID: 2101439718}
-  - spaceTransform: {fileID: 394378612}
-  - spaceTransform: {fileID: 418453934}
-  - spaceTransform: {fileID: 134787680}
-  - spaceTransform: {fileID: 1547510463}
-  - spaceTransform: {fileID: 983346874}
-  - spaceTransform: {fileID: 813497468}
-  - spaceTransform: {fileID: 1670404991}
-  - spaceTransform: {fileID: 514818298}
-  - spaceTransform: {fileID: 81022011}
-  - spaceTransform: {fileID: 1783594989}
-  - spaceTransform: {fileID: 1681293746}
-  - spaceTransform: {fileID: 66058572}
-  - spaceTransform: {fileID: 585596232}
-  - spaceTransform: {fileID: 806834095}
-  - spaceTransform: {fileID: 634607656}
-  - spaceTransform: {fileID: 870628022}
-  - spaceTransform: {fileID: 247615351}
-  - spaceTransform: {fileID: 95359901}
-  - spaceTransform: {fileID: 1896680561}
-  - spaceTransform: {fileID: 335333288}
-  - spaceTransform: {fileID: 1196149678}
-  - spaceTransform: {fileID: 1194486288}
-  - spaceTransform: {fileID: 707934867}
-  - spaceTransform: {fileID: 590129487}
-  - spaceTransform: {fileID: 1736488714}
-  - spaceTransform: {fileID: 57149173}
-  - spaceTransform: {fileID: 994487366}
-  - spaceTransform: {fileID: 1028097055}
-  - spaceTransform: {fileID: 898050362}
-  - spaceTransform: {fileID: 1535121208}
-  - spaceTransform: {fileID: 1599232704}
-  - spaceTransform: {fileID: 1068241332}
-  - spaceTransform: {fileID: 783171654}
-  - spaceTransform: {fileID: 1787953761}
-  - spaceTransform: {fileID: 740233838}
-  player: {fileID: 1488041846}
+  - {fileID: 1072766713}
+  - {fileID: 1026576234}
+  - {fileID: 1984094328}
+  - {fileID: 416071981}
+  - {fileID: 1988925322}
+  - {fileID: 1477086062}
+  - {fileID: 1799521722}
+  - {fileID: 575319662}
+  - {fileID: 582330107}
+  - {fileID: 688844308}
+  - {fileID: 1282707006}
+  - {fileID: 2030870790}
+  - {fileID: 1678711303}
+  - {fileID: 263612125}
+  - {fileID: 738757047}
+  - {fileID: 1926637865}
+  - {fileID: 1461600054}
+  - {fileID: 1734733762}
+  - {fileID: 399906191}
+  - {fileID: 1337796521}
+  - {fileID: 1966634041}
+  - {fileID: 557249660}
+  - {fileID: 2000191172}
+  - {fileID: 1994119625}
+  - {fileID: 2101439718}
+  - {fileID: 394378612}
+  - {fileID: 418453934}
+  - {fileID: 134787680}
+  - {fileID: 1547510463}
+  - {fileID: 983346874}
+  - {fileID: 813497468}
+  - {fileID: 1670404991}
+  - {fileID: 514818298}
+  - {fileID: 81022011}
+  - {fileID: 1783594989}
+  - {fileID: 1681293746}
+  - {fileID: 66058572}
+  - {fileID: 585596232}
+  - {fileID: 806834095}
+  - {fileID: 634607656}
+  - {fileID: 870628022}
+  - {fileID: 247615351}
+  - {fileID: 95359901}
+  - {fileID: 1896680561}
+  - {fileID: 335333288}
+  - {fileID: 1196149678}
+  - {fileID: 1194486288}
+  - {fileID: 707934867}
+  - {fileID: 590129487}
+  - {fileID: 1736488714}
+  - {fileID: 57149173}
+  - {fileID: 994487366}
+  - {fileID: 1028097055}
+  - {fileID: 898050362}
+  - {fileID: 1535121208}
+  - {fileID: 1599232704}
+  - {fileID: 1068241332}
+  - {fileID: 783171654}
+  - {fileID: 1787953761}
+  - {fileID: 740233838}
+  player: {fileID: 1488041844}
 --- !u!4 &1343942081
 Transform:
   m_ObjectHideFlags: 0
@@ -7602,6 +7602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saveData:
     playerPosition: 0
+    diceRollResult: 0
 --- !u!1 &2030870789
 GameObject:
   m_ObjectHideFlags: 0

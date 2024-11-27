@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.IO;  // 必要な名前空間
 
 public class DiceController : MonoBehaviour
 {

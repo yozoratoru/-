@@ -1,5 +1,5 @@
 [System.Serializable]
 public class ScoreData
 {
-    public int totalScore; // 合計スコア
+    public int score; // プレイヤーの移動量として使うスコア
 }
