@@ -66,24 +66,23 @@ public class MinigameController : MonoBehaviour
         }
     }
 
-private void EndMinigame()
-{
-    isGameRunning = false;
-
-    if (DataManager.Instance == null || DataManager.Instance.saveData == null)
+    private void EndMinigame()
     {
-        Debug.LogError("DataManager or saveData is null.");
-        return;
+        isGameRunning = false;
+
+        if (DataManager.Instance == null || DataManager.Instance.scoreData == null)
+        {
+            Debug.LogError("DataManager or scoreData is null.");
+            return;
+        }
+
+        // スコアを保存
+        DataManager.Instance.scoreData.totalScore += score;
+        DataManager.Instance.SaveData(); // スコアを JSON に保存
+
+        Debug.Log("Total Score saved: " + DataManager.Instance.scoreData.totalScore);
+
+        // すごろく画面に戻る
+        SceneManager.LoadScene("Samplescene");
     }
-
-    // スコアを保存
-    DataManager.Instance.saveData.playerPosition += score;
-    DataManager.Instance.SaveData(); // JSON に保存
-
-    Debug.Log("Player position saved: " + DataManager.Instance.saveData.playerPosition);
-
-    // すごろく画面に戻る
-    SceneManager.LoadScene("SugorokuScene");
-}
-
 }
