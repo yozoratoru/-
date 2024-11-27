@@ -83,7 +83,7 @@ private void EndMinigame()
     Debug.Log("Player position saved: " + DataManager.Instance.saveData.playerPosition);
 
     // すごろく画面に戻る
-    SceneManager.LoadScene("SugorokuScene");
+    SceneManager.LoadScene("SampleScene");
 }
 
 }
